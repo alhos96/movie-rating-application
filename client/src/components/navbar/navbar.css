@@ -1,0 +1,11 @@
+.Search-wrapp {
+  position: relative;
+  height: 80px;
+}
+.search {
+  position: absolute;
+  width: 95%;
+  left: 50%;
+  bottom: 10%;
+  transform: translate(-50%);
+}
