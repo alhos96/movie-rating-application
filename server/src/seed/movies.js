@@ -728,6 +728,7 @@ let movies = [
     country: "US",
     network: "The CW",
     status: "Running",
+    plot: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit accusamus quos architecto quod? Sunt nobis molestiae consectetur dolor distinctio. Fugit consequatur enim quis cumque possimus quas explicabo consequuntur tenetur architecto!",
     posterUrl: "https://static.episodate.com/images/tv-show/thumbnail/35624.jpg",
     type: "TV-show",
   },
@@ -742,6 +743,7 @@ let movies = [
     status: "Ended",
     posterUrl: "https://static.episodate.com/images/tv-show/thumbnail/23455.jpg",
     type: "TV-show",
+    plot: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit accusamus quos architecto quod? Sunt nobis molestiae consectetur dolor distinctio. Fugit consequatur enim quis cumque possimus quas explicabo consequuntur tenetur architecto!",
   },
   {
     id: 29560,
@@ -754,6 +756,7 @@ let movies = [
     status: "Ended",
     posterUrl: "https://static.episodate.com/images/tv-show/thumbnail/29560.jpg",
     type: "TV-show",
+    plot: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit accusamus quos architecto quod? Sunt nobis molestiae consectetur dolor distinctio. Fugit consequatur enim quis cumque possimus quas explicabo consequuntur tenetur architecto!",
   },
   {
     id: 43467,
@@ -766,6 +769,7 @@ let movies = [
     status: "Ended",
     posterUrl: "https://static.episodate.com/images/tv-show/thumbnail/43467.com",
     type: "TV-show",
+    plot: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit accusamus quos architecto quod? Sunt nobis molestiae consectetur dolor distinctio. Fugit consequatur enim quis cumque possimus quas explicabo consequuntur tenetur architecto!",
   },
   {
     id: 43234,
@@ -778,6 +782,7 @@ let movies = [
     status: "Ended",
     posterUrl: "https://static.episodate.com/images/tv-show/thumbnail/43234.jpg",
     type: "TV-show",
+    plot: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit accusamus quos architecto quod? Sunt nobis molestiae consectetur dolor distinctio. Fugit consequatur enim quis cumque possimus quas explicabo consequuntur tenetur architecto!",
   },
   {
     id: 46692,
@@ -790,6 +795,7 @@ let movies = [
     status: "Running",
     posterUrl: "https://static.episodate.com/images/tv-show/thumbnail/46692.jpg",
     type: "TV-show",
+    plot: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit accusamus quos architecto quod? Sunt nobis molestiae consectetur dolor distinctio. Fugit consequatur enim quis cumque possimus quas explicabo consequuntur tenetur architecto!",
   },
   {
     id: 24010,
@@ -802,6 +808,7 @@ let movies = [
     status: "Running",
     posterUrl: "https://static.episodate.com/images/tv-show/thumbnail/24010.jpg",
     type: "TV-show",
+    plot: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit accusamus quos architecto quod? Sunt nobis molestiae consectetur dolor distinctio. Fugit consequatur enim quis cumque possimus quas explicabo consequuntur tenetur architecto!",
   },
   {
     id: 46778,
@@ -814,6 +821,7 @@ let movies = [
     status: "Running",
     posterUrl: "https://static.episodate.com/images/tv-show/thumbnail/46778.jpg",
     type: "TV-show",
+    plot: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit accusamus quos architecto quod? Sunt nobis molestiae consectetur dolor distinctio. Fugit consequatur enim quis cumque possimus quas explicabo consequuntur tenetur architecto!",
   },
   {
     id: 47145,
@@ -826,6 +834,7 @@ let movies = [
     status: "Ended",
     posterUrl: "https://static.episodate.com/images/tv-show/thumbnail/47145.",
     type: "TV-show",
+    plot: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit accusamus quos architecto quod? Sunt nobis molestiae consectetur dolor distinctio. Fugit consequatur enim quis cumque possimus quas explicabo consequuntur tenetur architecto!",
   },
   {
     id: 52439,
@@ -838,6 +847,7 @@ let movies = [
     status: "Running",
     posterUrl: "https://static.episodate.com/images/tv-show/thumbnail/52439.jpg",
     type: "TV-show",
+    plot: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit accusamus quos architecto quod? Sunt nobis molestiae consectetur dolor distinctio. Fugit consequatur enim quis cumque possimus quas explicabo consequuntur tenetur architecto!",
   },
   {
     id: 33514,
@@ -850,6 +860,7 @@ let movies = [
     status: "Ended",
     posterUrl: "https://static.episodate.com/images/tv-show/thumbnail/33514.jpg",
     type: "TV-show",
+    plot: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit accusamus quos architecto quod? Sunt nobis molestiae consectetur dolor distinctio. Fugit consequatur enim quis cumque possimus quas explicabo consequuntur tenetur architecto!",
   },
   {
     id: 22410,
@@ -862,6 +873,7 @@ let movies = [
     status: "To Be Determined",
     posterUrl: "https://static.episodate.com/images/tv-show/thumbnail/22410.jpg",
     type: "TV-show",
+    plot: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit accusamus quos architecto quod? Sunt nobis molestiae consectetur dolor distinctio. Fugit consequatur enim quis cumque possimus quas explicabo consequuntur tenetur architecto!",
   },
   {
     id: 5348,
@@ -874,6 +886,7 @@ let movies = [
     status: "Ended",
     posterUrl: "https://static.episodate.com/images/tv-show/thumbnail/5348.jpg",
     type: "TV-show",
+    plot: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit accusamus quos architecto quod? Sunt nobis molestiae consectetur dolor distinctio. Fugit consequatur enim quis cumque possimus quas explicabo consequuntur tenetur architecto!",
   },
   {
     id: 8362,
@@ -886,6 +899,7 @@ let movies = [
     status: "Ended",
     posterUrl: "https://static.episodate.com/images/tv-show/thumbnail/8362.jpg",
     type: "TV-show",
+    plot: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit accusamus quos architecto quod? Sunt nobis molestiae consectetur dolor distinctio. Fugit consequatur enim quis cumque possimus quas explicabo consequuntur tenetur architecto!",
   },
   {
     id: 31452,
@@ -898,6 +912,7 @@ let movies = [
     status: "Ended",
     posterUrl: "https://static.episodate.com/images/tv-show/thumbnail/31452.jpg",
     type: "TV-show",
+    plot: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit accusamus quos architecto quod? Sunt nobis molestiae consectetur dolor distinctio. Fugit consequatur enim quis cumque possimus quas explicabo consequuntur tenetur architecto!",
   },
   {
     id: 37444,
@@ -910,6 +925,7 @@ let movies = [
     status: "Ended",
     posterUrl: "https://static.episodate.com/images/tv-show/thumbnail/37444.jpg",
     type: "TV-show",
+    plot: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit accusamus quos architecto quod? Sunt nobis molestiae consectetur dolor distinctio. Fugit consequatur enim quis cumque possimus quas explicabo consequuntur tenetur architecto!",
   },
   {
     id: 29977,
@@ -922,6 +938,7 @@ let movies = [
     status: "Ended",
     posterUrl: "https://static.episodate.com/images/tv-show/thumbnail/29977.jpg",
     type: "TV-show",
+    plot: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit accusamus quos architecto quod? Sunt nobis molestiae consectetur dolor distinctio. Fugit consequatur enim quis cumque possimus quas explicabo consequuntur tenetur architecto!",
   },
   {
     id: 29671,
@@ -934,6 +951,7 @@ let movies = [
     status: "Ended",
     posterUrl: "https://static.episodate.com/images/tv-show/thumbnail/29671.png",
     type: "TV-show",
+    plot: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit accusamus quos architecto quod? Sunt nobis molestiae consectetur dolor distinctio. Fugit consequatur enim quis cumque possimus quas explicabo consequuntur tenetur architecto!",
   },
   {
     id: 36210,
@@ -946,6 +964,7 @@ let movies = [
     status: "Running",
     posterUrl: "https://static.episodate.com/images/tv-show/thumbnail/36210.jpg",
     type: "TV-show",
+    plot: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit accusamus quos architecto quod? Sunt nobis molestiae consectetur dolor distinctio. Fugit consequatur enim quis cumque possimus quas explicabo consequuntur tenetur architecto!",
   },
   {
     id: 49269,
@@ -958,6 +977,7 @@ let movies = [
     status: "Running",
     posterUrl: "https://static.episodate.com/images/tv-show/thumbnail/49269.jpg",
     type: "TV-show",
+    plot: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit accusamus quos architecto quod? Sunt nobis molestiae consectetur dolor distinctio. Fugit consequatur enim quis cumque possimus quas explicabo consequuntur tenetur architecto!",
   },
 ];
 

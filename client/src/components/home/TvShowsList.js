@@ -12,7 +12,14 @@ function TvShowsList() {
       {tvShows.length > 0 ? (
         tvShows.map((show, index) => (
           <Grid key={index} item xs={12} sm={6} md={4} lg={3} xl={2}>
-            <MovieCard image={show.image} title={show.title} id={show._id} rating={show.averageRating} />
+            <MovieCard
+              image={show.image}
+              description={show.description}
+              release={show.release}
+              title={show.title}
+              id={show._id}
+              rating={show.averageRating}
+            />
           </Grid>
         ))
       ) : (

@@ -12,7 +12,14 @@ function MoviesList() {
       {movies.length > 0 ? (
         movies.map((movie, index) => (
           <Grid key={index} item xs={12} sm={6} md={4} lg={3} xl={2}>
-            <MovieCard image={movie.image} release={movie.release} title={movie.title} id={movie._id} rating={movie.averageRating} />
+            <MovieCard
+              image={movie.image}
+              release={movie.release}
+              title={movie.title}
+              id={movie._id}
+              rating={movie.averageRating}
+              description={movie.description}
+            />
           </Grid>
         ))
       ) : (

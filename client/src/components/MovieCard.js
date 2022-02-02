@@ -4,22 +4,24 @@ import StarRateOutlinedIcon from "@mui/icons-material/StarRateOutlined";
 import RateForm from "./RateForm";
 import noimage from "../assets/images/noImage.png";
 
-function MovieCard({ title, release, image, id, rating }) {
+function MovieCard({ title, release, image, id, rating, description }) {
   const [fade, setFade] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
   useEffect(() => {
     setFade(true);
   }, []);
 
-  //napraviti formu za ocjenjivanje filma. Napraviti popper
+  //event handlers
 
   return (
     <Fade in={fade} timeout={{ enter: 2500 }}>
       <div>
-        <RateForm />
+        <RateForm openModal={openModal} setOpenModal={setOpenModal} description={description} rating={rating} title={title} id={id} />
+
         <div className="movie-card-wrapp">
           <div className="rate-icon-wrapp">
-            <StarRateOutlinedIcon className="rate-icon" />
+            <StarRateOutlinedIcon className="rate-icon" onClick={() => setOpenModal(true)} />
           </div>
 
           <img
@@ -35,7 +37,7 @@ function MovieCard({ title, release, image, id, rating }) {
         </div>
 
         <div className="rating">
-          <Rating readOnly defaultValue={rating}></Rating>
+          <Rating readOnly value={rating}></Rating>
         </div>
       </div>
     </Fade>

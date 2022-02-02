@@ -7,16 +7,23 @@ const slice = createSlice({
   initialState: {
     movies: [],
     tvShows: [],
+    success: "",
+    error: "",
   },
   reducers: {
     moviesRecieved: (movies, { payload }) => {
       movies.movies = payload.data.movies;
       movies.tvShows = payload.data.tvShows;
     },
+    movieRated: (movies, { payload }) => {
+      movies.movies = payload.data.movies;
+      movies.tvShows = payload.data.tvShows;
+      movies.success = "Thank you!";
+    },
 
     //Resets all error messages left behind. Dispatch on onmount.
     messageReset: (movies, { payload }) => {
-      movies.message = "";
+      movies.success = "";
       movies.error = "";
     },
 
@@ -39,5 +46,16 @@ export const getMovies = (url, method, data) => (dispatch, getState) => {
   );
 };
 
-export const { moviesRecieved, gotError } = slice.actions;
+export const rateMovie = (url, method, data) => (dispatch, getState) => {
+  dispatch(
+    apiRequestStarted({
+      url,
+      method,
+      data,
+      onSuccess: movieRated.type,
+      onError: gotError.type,
+    })
+  );
+};
+export const { moviesRecieved, movieRated, gotError, messageReset } = slice.actions;
 export default slice.reducer;
