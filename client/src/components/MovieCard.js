@@ -4,7 +4,7 @@ import StarRateOutlinedIcon from "@mui/icons-material/StarRateOutlined";
 import RateForm from "./RateForm";
 import noimage from "../assets/images/noImage.png";
 
-function MovieCard({ title, release, image, id, rating, description }) {
+function MovieCard({ title, release, image, id, rating, description, type }) {
   const [fade, setFade] = useState(false);
   const [openModal, setOpenModal] = useState(false);
 
@@ -17,7 +17,15 @@ function MovieCard({ title, release, image, id, rating, description }) {
   return (
     <Fade in={fade} timeout={{ enter: 2500 }}>
       <div>
-        <RateForm openModal={openModal} setOpenModal={setOpenModal} description={description} rating={rating} title={title} id={id} />
+        <RateForm
+          openModal={openModal}
+          setOpenModal={setOpenModal}
+          description={description}
+          rating={rating}
+          title={title}
+          id={id}
+          type={type}
+        />
 
         <div className="movie-card-wrapp">
           <div className="rate-icon-wrapp">

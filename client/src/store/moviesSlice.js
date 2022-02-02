@@ -6,18 +6,15 @@ const slice = createSlice({
 
   initialState: {
     movies: [],
-    tvShows: [],
     success: "",
     error: "",
   },
   reducers: {
     moviesRecieved: (movies, { payload }) => {
-      movies.movies = payload.data.movies;
-      movies.tvShows = payload.data.tvShows;
+      movies.movies = payload.data;
     },
     movieRated: (movies, { payload }) => {
-      movies.movies = payload.data.movies;
-      movies.tvShows = payload.data.tvShows;
+      movies.movies = payload.data;
       movies.success = "Thank you!";
     },
 

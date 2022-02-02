@@ -7,6 +7,7 @@ const app = express();
 const config = require("../config");
 
 const movieRoutes = require("./routes/movieRoutes");
+const tvShowRoutes = require("./routes/tvShowRoutes");
 
 //middlewares
 app.use(express.urlencoded({ extended: true }));
@@ -16,6 +17,7 @@ app.use(cors());
 //routes
 
 app.use("/api/movies", movieRoutes);
+app.use("/api/tvShows", tvShowRoutes);
 
 mongoose
   .connect(config.mongo)

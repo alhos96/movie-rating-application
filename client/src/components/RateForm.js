@@ -3,7 +3,7 @@ import { Modal, Rating, Button, Typography, Zoom } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { rateMovie, messageReset } from "../store/moviesSlice";
 
-function RateForm({ openModal, setOpenModal, description, rating, title, id }) {
+function RateForm({ openModal, setOpenModal, description, rating, title, id, type }) {
   const dispatch = useDispatch();
 
   // global state
@@ -15,7 +15,7 @@ function RateForm({ openModal, setOpenModal, description, rating, title, id }) {
   // functions
   function rate() {
     dispatch(
-      rateMovie(`/api/movies/rate/${id}`, "POST", {
+      rateMovie(`/api/${type}s/rate/${id}`, "POST", {
         userRating,
       })
     );
@@ -29,15 +29,15 @@ function RateForm({ openModal, setOpenModal, description, rating, title, id }) {
   // side effects
   useEffect(() => {
     setUserRating(0); //disable button
-
-    setTimeout(() => {
-      handleCloseModal();
-    }, 2000);
   }, [successMessage]);
 
   return (
-    <Modal open={openModal} onClose={() => handleCloseModal()}>
+    <Modal open={openModal} onClose={handleCloseModal}>
       <div className="modal-content">
+        <Typography id="close-modal-icon" onClick={handleCloseModal}>
+          x
+        </Typography>
+
         <Typography gutterBottom className="details-title" color="white">
           {title}
           <span id="details-display-rating">
@@ -54,6 +54,7 @@ function RateForm({ openModal, setOpenModal, description, rating, title, id }) {
             {successMessage}
           </Typography>
         </Zoom>
+
         <div className="rating">
           <span id="rating-label">What do you think? </span>
           <Rating readOnly={!!successMessage} onChange={(e) => setUserRating(e.target.value)} size="large"></Rating>

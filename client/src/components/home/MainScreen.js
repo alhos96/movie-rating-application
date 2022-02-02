@@ -4,14 +4,14 @@ import ToggleRibbon from "./ToggleRibbon";
 import TvShowsList from "./TvShowsList";
 
 function MainScreen() {
-  const [toRender, setToRender] = useState("movies");
+  const [renderMoviesOrShows, setRenderMoviesOrShows] = useState("movies");
 
   return (
     <>
-      <ToggleRibbon toRender={toRender} setToRender={setToRender} />
+      <ToggleRibbon renderMoviesOrShows={renderMoviesOrShows} setRenderMoviesOrShows={setRenderMoviesOrShows} toggleButton={true} />
 
-      {toRender === "movies" && <MoviesList />}
-      {toRender === "tvShows" && <TvShowsList />}
+      {renderMoviesOrShows === "movies" && <MoviesList />}
+      {renderMoviesOrShows === "tvShows" && <TvShowsList />}
     </>
   );
 }

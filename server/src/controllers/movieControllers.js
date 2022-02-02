@@ -2,11 +2,11 @@ const { Movie } = require("../models/movieModel");
 const _ = require("lodash");
 
 exports.getMovies = async (req, res, next) => {
-  const movies = await Movie.find().where("type").equals("Movie").sort({ averageRating: "desc" });
+  const limit = parseInt(req.params.limit);
 
-  const tvShows = await Movie.find().where("type").equals("TV-show").sort({ averageRating: "desc" });
+  const movies = await Movie.find().where("type").equals("movie").sort({ averageRating: "desc" }).limit(limit);
 
-  res.status(200).json({ movies, tvShows });
+  res.status(200).json(movies);
 };
 
 exports.rateMovie = async (req, res, next) => {
@@ -22,9 +22,7 @@ exports.rateMovie = async (req, res, next) => {
 
   movie.save();
 
-  const movies = await Movie.find().where("type").equals("Movie").sort({ averageRating: "desc" });
+  const movies = await Movie.find().where("type").equals("movie").sort({ averageRating: "desc" }).limit(10);
 
-  const tvShows = await Movie.find().where("type").equals("TV-show").sort({ averageRating: "desc" });
-
-  res.status(200).json({ movies, tvShows });
+  res.status(200).json(movies);
 };
