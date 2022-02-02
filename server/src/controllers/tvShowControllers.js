@@ -11,7 +11,7 @@ exports.getTvShows = async (req, res, next) => {
 
 exports.rateTvShow = async (req, res, next) => {
   const { id } = req.params;
-  const { userRating } = req.body;
+  const { userRating, tvShowsAmount } = req.body;
 
   const tvShow = await Movie.findOne({ _id: id });
 
@@ -21,7 +21,21 @@ exports.rateTvShow = async (req, res, next) => {
 
   tvShow.save();
 
-  const tvShows = await Movie.find().where("type").equals("tvShow").sort({ averageRating: "desc" }).limit(10);
+  const tvShows = await Movie.find().where("type").equals("tvShow").sort({ averageRating: "desc" }).limit(tvShowsAmount);
 
   res.status(200).json(tvShows);
+};
+
+exports.searchTvShow = async (req, res, next) => {
+  const search = req.params.search.toLowerCase();
+
+  const allTvShows = await Movie.find({ type: "tvShow" });
+
+  let searchedTvShows = [];
+
+  allTvShows.map((tvShow) => {
+    tvShow.titleForSearch.includes(search) && searchedTvShows.push(tvShow);
+  });
+
+  res.status(200).json(searchedTvShows);
 };

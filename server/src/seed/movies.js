@@ -411,7 +411,7 @@ let movies = [
     director: "Guillermo del Toro",
     actors: ["Ivana Baquero", "Sergi López", "Maribel Verdú", "Doug Jones"],
     plot: "In the falangist Spain of 1944, the bookish young stepdaughter of a sadistic army officer escapes into an eerie but captivating fantasy world.",
-    posterUrl: "",
+    posterUrl: "https://m.media-amazon.com/images/I/51Jjxh7oH5L.jpg",
     type: "movie",
   },
   {

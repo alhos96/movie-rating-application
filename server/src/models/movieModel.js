@@ -4,7 +4,7 @@ const { Schema, model } = mongoose;
 exports.Movie = model(
   "Movie",
   new Schema({
-    title: String,
+    title: { type: String, index: true },
     titleForSearch: String, //lowercased movie title
     release: Number,
     image: String,

@@ -43,6 +43,18 @@ export const getTvShows = (url, method, data) => (dispatch, getState) => {
   );
 };
 
+export const searchTvShows = (url, method, data) => (dispatch, getState) => {
+  dispatch(
+    apiRequestStarted({
+      url,
+      method,
+      data,
+      onSuccess: tvShowsRecieved.type,
+      onError: gotError.type,
+    })
+  );
+};
+
 export const rateTvShow = (url, method, data) => (dispatch, getState) => {
   dispatch(
     apiRequestStarted({

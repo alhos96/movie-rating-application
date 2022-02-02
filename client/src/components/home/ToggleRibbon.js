@@ -1,8 +1,13 @@
 import { Divider, ToggleButtonGroup, ToggleButton } from "@mui/material";
+import { useDispatch } from "react-redux";
+import { currentLocation } from "../../store/moviesSlice";
 
 function ToggleRibbon({ renderMoviesOrShows, setRenderMoviesOrShows }) {
+  const dispatch = useDispatch();
+
   function handleChange(e) {
     setRenderMoviesOrShows(e.target.value);
+    dispatch(currentLocation(e.target.value));
   }
 
   return (

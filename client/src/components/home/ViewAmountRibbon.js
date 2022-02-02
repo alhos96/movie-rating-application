@@ -1,15 +1,6 @@
-import { useEffect, useState } from "react";
-import { Divider, ButtonGroup, Button, Fade } from "@mui/material";
-import { useDispatch, useSelector } from "react-redux";
-import { viewMore, viewLess } from "../../helpers/viewAmountFunctions";
-import { getMovies } from "../../store/moviesSlice";
+import { Divider, ButtonGroup, Button } from "@mui/material";
 
 function ViewAmountRibbon({ showAmount, setShowAmount }) {
-  const dispatch = useDispatch();
-
-  // global state
-  const tvShows = useSelector(({ movies }) => movies.tvShows);
-
   // functions
 
   function viewMore(setShowAmount) {

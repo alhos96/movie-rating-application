@@ -33,6 +33,7 @@ function MoviesList() {
                 rating={movie.averageRating}
                 description={movie.description}
                 type={movie.type}
+                moviesAmount={moviesAmount}
               />
             </Grid>
           ))

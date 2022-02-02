@@ -33,6 +33,7 @@ function TvShowsList() {
                 id={show._id}
                 rating={show.averageRating}
                 type={show.type}
+                tvShowsAmount={showsAmount}
               />
             </Grid>
           ))

@@ -3,7 +3,7 @@ import { Modal, Rating, Button, Typography, Zoom } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { rateMovie, messageReset } from "../store/moviesSlice";
 
-function RateForm({ openModal, setOpenModal, description, rating, title, id, type }) {
+function RateForm({ openModal, setOpenModal, description, rating, title, id, type, moviesAmount, tvShowsAmount }) {
   const dispatch = useDispatch();
 
   // global state
@@ -17,6 +17,8 @@ function RateForm({ openModal, setOpenModal, description, rating, title, id, typ
     dispatch(
       rateMovie(`/api/${type}s/rate/${id}`, "POST", {
         userRating,
+        moviesAmount,
+        tvShowsAmount,
       })
     );
   }

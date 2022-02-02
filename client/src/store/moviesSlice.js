@@ -6,6 +6,7 @@ const slice = createSlice({
 
   initialState: {
     movies: [],
+    currentLocation: "movies", // to know what is user searching for (from which screen)
     success: "",
     error: "",
   },
@@ -25,13 +26,28 @@ const slice = createSlice({
     },
 
     gotError: (movies, { payload }) => {
-      console.log(payload);
       movies.error = payload;
+    },
+
+    currentLocation: (movies, { payload }) => {
+      movies.currentLocation = payload;
     },
   },
 });
 
 export const getMovies = (url, method, data) => (dispatch, getState) => {
+  dispatch(
+    apiRequestStarted({
+      url,
+      method,
+      data,
+      onSuccess: moviesRecieved.type,
+      onError: gotError.type,
+    })
+  );
+};
+
+export const searchMovies = (url, method, data) => (dispatch, getState) => {
   dispatch(
     apiRequestStarted({
       url,
@@ -54,5 +70,5 @@ export const rateMovie = (url, method, data) => (dispatch, getState) => {
     })
   );
 };
-export const { moviesRecieved, movieRated, gotError, messageReset } = slice.actions;
+export const { moviesRecieved, movieRated, gotError, messageReset, currentLocation } = slice.actions;
 export default slice.reducer;

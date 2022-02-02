@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Fade, Rating, Typography } from "@mui/material";
+import { Fade, Rating } from "@mui/material";
 import StarRateOutlinedIcon from "@mui/icons-material/StarRateOutlined";
 import RateForm from "./RateForm";
 import noimage from "../assets/images/noImage.png";
 
-function MovieCard({ title, release, image, id, rating, description, type }) {
+function MovieCard({ title, release, image, id, rating, description, type, moviesAmount, tvShowsAmount }) {
   const [fade, setFade] = useState(false);
   const [openModal, setOpenModal] = useState(false);
 
@@ -15,7 +15,7 @@ function MovieCard({ title, release, image, id, rating, description, type }) {
   //event handlers
 
   return (
-    <Fade in={fade} timeout={{ enter: 2500 }}>
+    <Fade in={fade} timeout={{ enter: 2000, exit: 1000 }}>
       <div>
         <RateForm
           openModal={openModal}
@@ -25,6 +25,8 @@ function MovieCard({ title, release, image, id, rating, description, type }) {
           title={title}
           id={id}
           type={type}
+          moviesAmount={moviesAmount}
+          tvShowsAmount={tvShowsAmount}
         />
 
         <div className="movie-card-wrapp">
