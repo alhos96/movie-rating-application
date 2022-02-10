@@ -5,10 +5,9 @@ exports.Movie = model(
   "Movie",
   new Schema({
     title: { type: String, index: true },
-    titleForSearch: String, //lowercased movie title
     release: Number,
     image: String,
-    description: String,
+    description: { type: String, index: true },
     cast: [String],
     ratings: [Number],
     type: String,

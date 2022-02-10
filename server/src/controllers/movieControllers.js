@@ -33,13 +33,20 @@ exports.rateMovie = async (req, res, next) => {
 exports.searchMovie = async (req, res, next) => {
   const search = req.params.search.toLowerCase();
 
-  const allMovies = await Movie.find({ type: "movie" });
+  var searchedMovies = [];
 
-  let searchedMovies = [];
+  searchedMovies = await Movie.find({
+    type: "movie",
+    title: { $regex: search, $options: "i" },
+  }).sort({ averageRating: "desc" });
 
-  allMovies.map((movie) => {
-    movie.titleForSearch.includes(search) && searchedMovies.push(movie);
-  });
+  // if nothing is found by title look in description
+  if (searchedMovies.length === 0) {
+    searchedMovies = await Movie.find({
+      type: "movie",
+      description: { $regex: search, $options: "i" },
+    }).sort({ averageRating: "desc" });
+  }
 
   res.status(200).json(searchedMovies);
 };

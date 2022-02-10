@@ -29,13 +29,17 @@ exports.rateTvShow = async (req, res, next) => {
 exports.searchTvShow = async (req, res, next) => {
   const search = req.params.search.toLowerCase();
 
-  const allTvShows = await Movie.find({ type: "tvShow" });
+  var searchedTvShows = [];
 
-  let searchedTvShows = [];
+  searchedTvShows = await Movie.find({ type: "tvShow", title: { $regex: search, $options: "i" } }).sort({ averageRating: "desc" });
 
-  allTvShows.map((tvShow) => {
-    tvShow.titleForSearch.includes(search) && searchedTvShows.push(tvShow);
-  });
+  // if nothing is found by title look in description
+  if (searchedTvShows.length === 0) {
+    searchedTvShows = await Movie.find({
+      type: "tvShow",
+      description: { $regex: search, $options: "i" },
+    }).sort({ averageRating: "desc" });
+  }
 
   res.status(200).json(searchedTvShows);
 };

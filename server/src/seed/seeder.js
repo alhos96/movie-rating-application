@@ -23,7 +23,6 @@ function seed() {
 
     let newMovie = new Movie({
       title: movie.title,
-      titleForSearch: movie.title.toLowerCase(),
       release: movie.year,
       image: movie.posterUrl,
       cast: movie?.actors,
