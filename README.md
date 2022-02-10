@@ -4,7 +4,7 @@ The software system being produced is called Movie Search. It's goal is to provi
 simpler and more rudimentary.
 
 ## technologies
-In this MERN stack application the **frontend** is developed in HTML5, CSS3 and React.js Material UI library. **backend** is created in Express and Node.js. I have used **Data** is stored in MongoDB Atlas or localy.
+In this MERN stack application the **frontend** is developed in HTML5, CSS3 and React.js Material UI library. **backend** is created in Express and Node.js. **Data** is stored in MongoDB Atlas or localy.
 
 ## description and features
 This application will provide following functions and features. It will: 
