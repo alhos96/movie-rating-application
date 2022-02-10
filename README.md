@@ -1,4 +1,4 @@
-# software-developer-task
+# Movie Search
 
 The software system being produced is called Movie Search. It's goal is to provide user with a movie search and rating engine, similar to the one on imdb.com, but much
 simpler and more rudimentary.
